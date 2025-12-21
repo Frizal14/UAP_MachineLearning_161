@@ -70,7 +70,7 @@ Berikut adalah bukti visualisasi hasil pelatihan (Confusion Matrix & Grafik Loss
 **1. Analisis Custom CNN**
 | Confusion Matrix | Grafik Training |
 | :---: | :---: |
-| ![Matrix CNN](Assets/cnn-confusion-matrix.png) | ![Plot CNN](Assets/cnn_plot.png) |
+| ![Matrix CNN](Assets/cnn-confusion_matrix.png) | ![Plot CNN](Assets/CNN_plot.png) |
 
 **2. Analisis Model Pretrained (VGG16 & MobileNetV2)**
 | Perbandingan Matrix | Perbandingan Grafik |
