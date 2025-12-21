@@ -83,6 +83,8 @@ Berikut adalah bukti visualisasi hasil pelatihan (Confusion Matrix & Grafik Loss
 Aplikasi dibangun menggunakan **Streamlit**. Berikut adalah antarmuka saat melakukan prediksi multi-model:
 Kamu akan diarahkan ke halaman ini untuk melakukan pengklasifikasian jenis ikan, dimana kamu dalam sekali input bisa memilih 3 model sekaligus dan pilih 1 per 1.
 ![Tampilan Awal Dashboard](Assets/Tampilan-awal.png)
+
+
 ![Tampilan Prediksi](Assets/Tampilan-prediksi-3-model-sekaligus.png)
 
 ## 💻 Struktur Kode VSCODE
@@ -91,18 +93,36 @@ Tampilan Struktur isi **VSCODE**. Berikut adalah antarmuka saat melakukan predik
 
 ---
 
+## 💾 Unduh Model (Wajib)
+Dikarenakan ukuran file yang besar, model **TIDAK** disertakan dalam repository ini. Anda wajib mengunduhnya dari Google Drive agar aplikasi dapat berjalan.
+
+👉 **[Klik Disini untuk Mengunduh Model (Google Drive)](https://drive.google.com/drive/folders/1NfR57UOqIpU_pH_aJgAUqQmrrebWhvXB?usp=sharing)**
+
+**Panduan Penempatan File:**
+1. Unduh kedua folder: `Model_Final` dan `Model_pre-trained`.
+2. Letakkan kedua folder tersebut di direktori utama proyek (sejajar dengan `app.py`).
+
+Struktur akhir folder Anda harus terlihat seperti ini:
+
 ## 📂 Struktur Folder Proyek
 Struktur direktori repository ini disusun sesuai standar pengumpulan:
 
 ```text
 UAP_MachineLearning_161/
-├── Assets/
-│   └──                       # Aset gambar untuk dokumentasi
-├── notebooks/
-│   └── UAP_ML_C_2022_161.ipynb  # Source code pelatihan model (Jupyter)
-├── app.py                    # File utama aplikasi Streamlit
-├── requirements.txt          # Daftar library yang dibutuhkan
-└── README.md                 # Dokumentasi proyek
+│
+├── app.py                    # File utama aplikasi
+├── Model_Final/              # 📂 Folder dari Google Drive
+│   ├── fish_classifier_final.h5
+│   └── fish_labels_final.json
+│
+├── Model_pre-trained/        # 📂 Folder dari Google Drive
+│   ├── VGG16_fast_best_FIXED.keras
+│   ├── MobileNetV2_fast_best_FIXED.keras
+│   └── class_names.pkl
+│
+├── Assets/                   # Folder gambar dokumentasi
+├── notebooks/                # Folder notebook
+└── requirements.txt
 ```
 
 ## 🛠️ Panduan Menjalankan Sistem (Lokal)
@@ -113,26 +133,28 @@ Ikuti langkah-langkah berikut untuk menjalankan aplikasi di komputer Anda.
 
 Buka terminal / Command Prompt, lalu jalankan perintah berikut secara berurutan:
 
-```text
 # Clone repository dan masuk ke direktori proyek
+```text
 git clone https://github.com/Frizal14/UAP_MachineLearning_161.git && cd UAP_MachineLearning_161
 ```
 
-```text
 # Instal seluruh dependensi
+```text
 pip install -r requirements.txt
 ```
-```text
+
 # Jika terjadi error kompatibilitas library (opsional)
+```text
 pip install tensorflow==2.16.1 streamlit pillow numpy pandas plotly
 ```
-
-```text
 # Jalankan aplikasi Streamlit
+```text
 streamlit run app.py
 ```
 
 Aplikasi akan otomatis terbuka di browser Anda pada alamat http://localhost:8501.
+
+##💡 Tips Pengguna Google Colab: File notebook pelatihan model (notebooks/UAP_ML_C_2022_161.ipynb) dapat langsung dijalankan di Google Colab jika Anda memiliki keterbatasan spesifikasi perangkat keras (GPU). Cukup unggah file tersebut ke Colab, namun pastikan Anda menyesuaikan kembali path (lokasi folder) dataset dan penyimpanan model di dalam kode agar sesuai dengan struktur direktori Google Drive Anda, karena konfigurasi path saat ini disesuaikan untuk lingkungan lokal (VS Code), dan sebaiknya pakai GPU T4 Google colab jika agar lebih lancar.
 
 ## 👨‍💻 Identitas Pengembang
 Proyek ini dibuat sebagai syarat kelulusan praktikum.
