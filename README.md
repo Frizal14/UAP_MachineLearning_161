@@ -87,6 +87,7 @@ Kamu akan diarahkan ke halaman ini untuk melakukan pengklasifikasian jenis ikan,
 ![Tampilan Awal Dashboard](Assets/Tampilan-awal.png)
 
 **Tampilan jika menginput gambar**
+
 Inputan gambar harus dari luar dataset jika ingin benar-benar menguji modelnya.
 ![InputGambar](Assets/InputGambar.png)
 
