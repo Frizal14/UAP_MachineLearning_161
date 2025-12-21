@@ -88,7 +88,7 @@ Kamu akan diarahkan ke halaman ini untuk melakukan pengklasifikasian jenis ikan,
 
 **Tampilan jika menginput gambar**
 Inputan gambar harus dari luar dataset jika ingin benar-benar menguji modelnya.
-![Tampilan Prediksi](Assets/InputanGambar.png)
+![InputGambar](Assets/InputGambar.png)
 
 **Tampilan jika melakukan prediksi 3 model  sekaligus**
 ![Tampilan Prediksi](Assets/Tampilan-prediksi-3-model-sekaligus.png)
