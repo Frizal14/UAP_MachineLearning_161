@@ -65,22 +65,24 @@ Berikut adalah tabel perbandingan performa ketiga model berdasarkan pengujian pa
 > **Kesimpulan:** Untuk implementasi aplikasi nyata, **MobileNetV2** dipilih karena ukurannya kecil (<20MB) dan akurasinya stabil di 97%.
 
 ### 🖼️ Visualisasi Performa
-Berikut adalah bukti visualisasi hasil pelatihan (Confusion Matrix & Grafik Loss):
+Berikut adalah bukti visualisasi hasil pelatihan (Confusion Matrix & Grafik Loss).
 
-| Confusion Matrix (CNN) | Grafik Training (CNN) |
+**1. Analisis Custom CNN**
+| Confusion Matrix | Grafik Training |
 | :---: | :---: |
-| ![Matrix CNN](Assets/images/cnn_confusion_matrix.png) | ![Plot CNN](Assets/images/cnn_plot.png) |
+| ![Matrix CNN](Assets/cnn_confusion_matrix.png) | ![Plot CNN](Assets/cnn_plot.png) |
 
-| Perbandingan Matrix (VGG vs MobileNet) | Perbandingan Grafik (VGG vs MobileNet) |
+**2. Analisis Model Pretrained (VGG16 & MobileNetV2)**
+| Perbandingan Matrix | Perbandingan Grafik |
 | :---: | :---: |
-| ![Matrix VGG MobileNet](Assets/images/confusion_matrix_vgg_mobilenet.png) | ![Plot VGG MobileNet](Assets/images/plot_vgg_mobilenet.png) |
+| ![Matrix VGG MobileNet](Assets/confusion_matrix_vgg_mobilenet.png) | ![Plot VGG MobileNet](Assets/plot_vgg_mobilenet.png) |
 
 ---
 
 ## 💻 Tampilan Aplikasi
 Aplikasi dibangun menggunakan **Streamlit**. Berikut adalah antarmuka saat melakukan prediksi multi-model:
-
-![Tampilan Prediksi](Assets/images/tampilan_prediksi_3_model.png)
+![Tampilan Awal Dashboard](Assets/tampilan_awal.png)
+![Tampilan Prediksi](Assets/tampilan_prediksi_3_model.png)
 
 ---
 
@@ -90,16 +92,9 @@ Struktur direktori repository ini disusun sesuai standar pengumpulan:
 ```text
 UAP_MachineLearning_161/
 ├── Assets/
-│   └── images/               # Aset gambar untuk dokumentasi
-├── models/                   # Folder untuk menyimpan file model (.h5/.keras)
+│   └──                       # Aset gambar untuk dokumentasi
 ├── notebooks/
 │   └── UAP_ML_C_2022_161.ipynb  # Source code pelatihan model (Jupyter)
 ├── app.py                    # File utama aplikasi Streamlit
 ├── requirements.txt          # Daftar library yang dibutuhkan
 └── README.md                 # Dokumentasi proyek
-
-
-## 🛠️ Panduan Menjalankan Sistem (Lokal)
-Ikuti langkah ini untuk menjalankan aplikasi di komputer Anda:
-
-1. Clone Repository
