@@ -81,8 +81,12 @@ Berikut adalah bukti visualisasi hasil pelatihan (Confusion Matrix & Grafik Loss
 
 ## 💻 Tampilan Aplikasi
 Aplikasi dibangun menggunakan **Streamlit**. Berikut adalah antarmuka saat melakukan prediksi multi-model:
-![Tampilan Awal Dashboard](Assets/tampilan_awal.png)
-![Tampilan Prediksi](Assets/tampilan_prediksi_3_model.png)
+![Tampilan Awal Dashboard](Assets/tampilan-awal.png)
+![Tampilan Prediksi](Assets/tampilan-prediksi-3-model.png)
+
+## 💻 Struktur Kode VSCODE
+Tampilan Struktur isi **VSCODE**. Berikut adalah antarmuka saat melakukan prediksi multi-model:
+![Tampilan Awal Dashboard](Assets/susunan-folder-vscode.png)
 
 ---
 
