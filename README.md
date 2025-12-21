@@ -75,14 +75,15 @@ Berikut adalah bukti visualisasi hasil pelatihan (Confusion Matrix & Grafik Loss
 **2. Analisis Model Pretrained (VGG16 & MobileNetV2)**
 | Perbandingan Matrix | Perbandingan Grafik |
 | :---: | :---: |
-| ![Matrix VGG MobileNet](Assets/confusion_matrix_vgg_mobilenet.png) | ![Plot VGG MobileNet](Assets/plot_vgg_mobilenet.png) |
+| ![Matrix VGG MobileNet](Assets/Matrix-VGG-MobileNet.png) | ![Plot VGG MobileNet](Assets/Plot-VGG-dan-MobilNetV2.png) |
 
 ---
 
 ## 💻 Tampilan Aplikasi
 Aplikasi dibangun menggunakan **Streamlit**. Berikut adalah antarmuka saat melakukan prediksi multi-model:
-![Tampilan Awal Dashboard](Assets/tampilan-awal.png)
-![Tampilan Prediksi](Assets/tampilan-prediksi-3-model.png)
+Kamu akan diarahkan ke halaman ini untuk melakukan pengklasifikasian jenis ikan, dimana kamu dalam sekali input bisa memilih 3 model sekaligus dan pilih 1 per 1.
+![Tampilan Awal Dashboard](Assets/Tampilan-awal.png)
+![Tampilan Prediksi](Assets/Tampilan-prediksi-3-model-sekaligus)
 
 ## 💻 Struktur Kode VSCODE
 Tampilan Struktur isi **VSCODE**. Berikut adalah antarmuka saat melakukan prediksi multi-model:
@@ -102,3 +103,46 @@ UAP_MachineLearning_161/
 ├── app.py                    # File utama aplikasi Streamlit
 ├── requirements.txt          # Daftar library yang dibutuhkan
 └── README.md                 # Dokumentasi proyek
+```
+
+## 🛠️ Panduan Menjalankan Sistem (Lokal)
+
+Ikuti langkah-langkah berikut untuk menjalankan aplikasi di komputer Anda.
+
+### 1️. Clone Repository, Instalasi Dependensi, dan Menjalankan Aplikasi
+
+Buka terminal / Command Prompt, lalu jalankan perintah berikut secara berurutan:
+
+```text
+# Clone repository dan masuk ke direktori proyek
+git clone https://github.com/Frizal14/UAP_MachineLearning_161.git && cd UAP_MachineLearning_161
+```
+
+```text
+# Instal seluruh dependensi
+pip install -r requirements.txt
+```
+```text
+# Jika terjadi error kompatibilitas library (opsional)
+pip install tensorflow==2.16.1 streamlit pillow numpy pandas plotly
+```
+
+```text
+# Jalankan aplikasi Streamlit
+streamlit run app.py
+```
+
+Aplikasi akan otomatis terbuka di browser Anda pada alamat http://localhost:8501.
+
+## 👨‍💻 Identitas Pengembang
+Proyek ini dibuat sebagai syarat kelulusan praktikum.
+
+Nama: Ferdy Rizal Mahendra Putra
+
+NIM: 202210370311161
+
+Kelas: Machine Learning C
+
+Program Studi: Informatika
+
+Universitas: Universitas Muhammadiyah Malang
