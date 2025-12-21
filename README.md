@@ -1,34 +1,24 @@
-\# 🐟 Fish Classifier Pro  
+\#🐟 Fish Classifier Pro
 
-\## Multi-Model Deep Learning Analytics Dashboard
+\### Dashboard Analisis Klasifikasi Citra Ikan (UAP Machine Learning)
 
 
 
 \[!\[Streamlit App](https://static.streamlit.io/badges/streamlit\_badge\_svg.svg)](https://github.com/Frizal14/UAP\_MachineLearning\_161)
 
-\[!\[Python 3.9+](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
-
 \[!\[TensorFlow 2.16.1](https://img.shields.io/badge/TensorFlow-2.16.1-orange.svg)](https://www.tensorflow.org/)
 
-
-
-\*\*Fish Classifier Pro\*\* adalah aplikasi \*\*dashboard analisis klasifikasi citra ikan berbasis Deep Learning\*\* yang dikembangkan untuk memenuhi \*\*Ujian Akhir Praktikum (UAP) Machine Learning\*\*.
-
-
-
-Aplikasi ini membandingkan performa \*\*tiga model Convolutional Neural Network (CNN)\*\*:
+\[!\[Python 3.9+](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
 
 
 
-\- 🔹 \*\*Custom CNN\*\*
+\##📝 Deskripsi Proyek
 
-\- 🔹 \*\*VGG16 (Transfer Learning)\*\*
-
-\- 🔹 \*\*MobileNetV2 (Pretrained \& Lightweight)\*\*
+\*\*Fish Classifier Pro\*\* adalah sistem klasifikasi citra berbasis \*Deep Learning\* yang dikembangkan untuk memenuhi \*\*Ujian Akhir Praktikum (UAP) Pembelajaran Mesin\*\*. Proyek ini bertujuan untuk mengklasifikasikan 5 jenis ikan secara otomatis menggunakan antarmuka web interaktif berbasis Streamlit.
 
 
 
-Fokus utama proyek ini adalah \*\*menganalisis perbedaan akurasi, stabilitas, dan generalisasi model CNN\*\* pada klasifikasi citra multi-kelas.
+Sistem ini membandingkan performa antara model yang dibangun dari awal (\*Custom CNN\*) dengan model \*Transfer Learning\* (\*VGG16\* dan \*MobileNetV2\*) untuk menganalisis efektivitas arsitektur terhadap dataset ikan.
 
 
 
@@ -36,51 +26,33 @@ Fokus utama proyek ini adalah \*\*menganalisis perbedaan akurasi, stabilitas, da
 
 
 
-\## 📑 Daftar Isi
+\##📊 Dataset dan Preprocessing
 
-1\. \[Dataset \& Kategori](#-dataset--kategori)
-
-2\. \[Model yang Digunakan](#-model-yang-digunakan)
-
-3\. \[Hasil Evaluasi Model](#-hasil-evaluasi-model)
-
-4\. \[Visualisasi \& Dokumentasi Asset](#-visualisasi--dokumentasi-asset)
-
-5\. \[Struktur Folder Proyek](#-struktur-folder-proyek)
-
-6\. \[Unduh Model (Weights)](#-unduh-model-weights)
-
-7\. \[Panduan Instalasi \& Penggunaan](#-panduan-instalasi--penggunaan)
-
-8\. \[Informasi Pengembang](#-informasi-pengembang)
+Dataset yang digunakan bersumber dari Kaggle: \*\*\[My Fish Dataset](https://www.kaggle.com/datasets/srajangoyal1808/my-fish-dataset)\*\*.
 
 
 
----
+\* \*\*Jumlah Data:\*\* > 5.000 citra (termasuk augmentasi).
 
+\* \*\*Kelas (Label):\*\*
 
+&nbsp;   1.  \*\*Archer Fish\*\* (Ikan Pemanah)
 
-\## 📊 Dataset \& Kategori
+&nbsp;   2.  \*\*Betta Fish\*\* (Ikan Cupang)
 
-Dataset yang digunakan adalah \*\*My Fish Dataset\*\* dari Kaggle yang terdiri dari \*\*5 kelas ikan\*\*:
+&nbsp;   3.  \*\*Blue Tang\*\* (Dory)
 
+&nbsp;   4.  \*\*Clown Sword Trigger Fish\*\*
 
+&nbsp;   5.  \*\*Yellow Tang\*\*
 
-\- \*\*Archer Fish\*\* – Ikan pemanah dengan kemampuan menyemprotkan air
+\* \*\*Preprocessing:\*\*
 
-\- \*\*Betta Fish\*\* – Ikan cupang dengan warna dan sirip kontras
+&nbsp;   \* \*Resizing:\* Citra diubah ukurannya menjadi \*\*128x128 pixel\*\* (atau sesuaikan dengan input model Anda).
 
-\- \*\*Blue Tang\*\* – Ikan laut berwarna biru
+&nbsp;   \* \*Normalization:\* Nilai pixel dinormalisasi ke rentang \[0, 1].
 
-\- \*\*Clown Sword Trigger Fish\*\* – Ikan berpola kompleks
-
-\- \*\*Yellow Tang\*\* – Ikan laut berwarna kuning cerah
-
-
-
-🔗 \*\*Dataset\*\*:  
-
-\[My Fish Dataset (Kaggle)](https://www.kaggle.com/datasets/srajangoyal1808/my-fish-dataset)
+&nbsp;   \* \*Augmentation:\* Random rotation, zoom, dan flip untuk memperbanyak variasi data latih.
 
 
 
@@ -88,47 +60,27 @@ Dataset yang digunakan adalah \*\*My Fish Dataset\*\* dari Kaggle yang terdiri d
 
 
 
-\## 🧠 Model yang Digunakan
+\##🧠 Model yang Digunakan
+
+Sesuai ketentuan UAP, proyek ini mengimplementasikan 3 model:
 
 
 
-| Model | Pendekatan | Deskripsi |
+\###1. Custom CNN (Non-Pretrained)
 
-|-----|-----------|----------|
-
-| Custom CNN | From Scratch | Arsitektur CNN sederhana buatan sendiri |
-
-| VGG16 | Transfer Learning | Model pretrained dengan performa stabil |
-
-| MobileNetV2 | Pretrained | Model ringan dan efisien |
+Model \*Convolutional Neural Network\* yang dibangun dari awal (\*from scratch\*). Terdiri dari beberapa lapis \*Conv2D\*, \*MaxPooling\*, dan \*Dropout\* untuk mengekstraksi fitur ikan secara mandiri tanpa bobot bawaan.
 
 
 
----
+\###2. VGG16 (Transfer Learning)
+
+Menggunakan arsitektur VGG16 dengan bobot \*ImageNet\*. Layer atas (\*top layers\*) dibekukan (\*freeze\*), dan ditambahkan \*Dense Layer\* baru untuk klasifikasi 5 kelas ikan. Model ini dipilih karena kemampuannya menangkap fitur visual yang detail.
 
 
 
-\## 🚀 Hasil Evaluasi Model
+\###3. MobileNetV2 (Transfer Learning)
 
-
-
-| Model | Accuracy | Precision | Recall | F1-Score |
-
-|------|----------|-----------|--------|---------|
-
-| \*\*Custom CNN\*\* | \*\*1.00\*\* | 1.00 | 1.00 | 1.00 |
-
-| \*\*VGG16\*\* | 0.92 | 0.92 | 0.92 | 0.92 |
-
-| \*\*MobileNetV2\*\* | 0.97 | 0.97 | 0.97 | 0.97 |
-
-
-
-⚠️ \*\*Catatan Analisis\*\*  
-
-Meskipun \*\*Custom CNN\*\* mencapai skor sempurna pada data uji, pengujian prediksi real-time menunjukkan adanya kesalahan pada kelas tertentu (khususnya \*\*Betta Fish\*\*).  
-
-Hal ini menunjukkan indikasi \*\*overfitting\*\*, sehingga model pretrained cenderung lebih stabil.
+Menggunakan arsitektur MobileNetV2 yang dikenal ringan (\*lightweight\*) dan efisien. Sangat cocok untuk implementasi pada aplikasi web karena ukuran model yang kecil namun tetap memiliki akurasi tinggi.
 
 
 
@@ -136,59 +88,49 @@ Hal ini menunjukkan indikasi \*\*overfitting\*\*, sehingga model pretrained cend
 
 
 
-\## 🖼️ Visualisasi \& Dokumentasi Asset
+\##📈 Hasil Evaluasi dan Analisis Perbandingan
+
+Berikut adalah tabel perbandingan performa ketiga model berdasarkan pengujian pada data test:
 
 
 
-\### 1️⃣ Confusion Matrix – Custom CNN
+| Model | Akurasi | Precision | Recall | F1-Score |
 
-Menunjukkan distribusi prediksi benar dan salah untuk setiap kelas ikan pada model Custom CNN.
+| :--- | :---: | :---: | :---: | :---: |
 
+| \*\*Custom CNN\*\* | \*\*100%\*\* | 1.00 | 1.00 | 1.00 |
 
+| \*\*MobileNetV2\*\* | \*\*97%\*\* | 0.97 | 0.97 | 0.97 |
 
-!\[CNN Confusion Matrix](Assets/images/cnn\_confusion\_matrix.png)
-
-
-
----
+| \*\*VGG16\*\* | \*\*92%\*\* | 0.92 | 0.92 | 0.92 |
 
 
 
-\### 2️⃣ Grafik Training Custom CNN
+\###🔍 Analisis Hasil
 
-Grafik akurasi dan loss selama proses training dan validation Custom CNN.
+1\.  \*\*Custom CNN\*\*: Mencapai akurasi sempurna (100%) pada data uji, namun saat diuji coba pada data \*real-time\* (gambar baru dari internet), model ini terkadang salah memprediksi (misal: \*Betta Fish\*). Ini mengindikasikan adanya kecenderungan \*\*Overfitting\*\* karena model terlalu menghafal data latih.
 
+2\.  \*\*MobileNetV2\*\*: Memberikan keseimbangan terbaik antara akurasi (97%) dan kecepatan. Model ini lebih stabil (Generalisasi baik) saat memprediksi gambar baru dibandingkan Custom CNN.
 
-
-!\[CNN Training Plot](Assets/images/cnn\_plot.png)
-
-
-
----
+3\.  \*\*VGG16\*\*: Memiliki akurasi terendah (92%) di antara ketiganya, kemungkinan karena arsitekturnya yang terlalu kompleks untuk dataset yang relatif sederhana ini, atau memerlukan \*fine-tuning\* lebih lanjut.
 
 
 
-\### 3️⃣ Confusion Matrix – VGG16 \& MobileNetV2
-
-Perbandingan performa klasifikasi antara dua model pretrained.
+> \*\*Kesimpulan:\*\* Untuk implementasi aplikasi, \*\*MobileNetV2\*\* adalah pilihan terbaik karena ringan dan memiliki generalisasi yang stabil.
 
 
 
-!\[Confusion Matrix VGG \& MobileNet](Assets/images/confusion\_matrix\_vgg\_mobilenet.png)
+\### Visualisasi Performa
+
+| Confusion Matrix (CNN) | Grafik Training (CNN) |
+
+| :---: | :---: |
+
+| !\[Matrix CNN](Assets/images/cnn\_confusion\_matrix.png) | !\[Plot CNN](Assets/images/cnn\_plot.png) |
 
 
 
----
-
-
-
-\### 4️⃣ Hasil Prediksi Acak – Custom CNN
-
-Contoh hasil prediksi citra uji secara acak menggunakan Custom CNN.
-
-
-
-!\[Random Prediction CNN](Assets/images/hasil\_prediksi\_acak\_cnn.png)
+\*(Gambar visualisasi model lain dapat dilihat di folder `Assets/images`)\*
 
 
 
@@ -196,197 +138,7 @@ Contoh hasil prediksi citra uji secara acak menggunakan Custom CNN.
 
 
 
-\### 5️⃣ Grafik Training VGG16 \& MobileNetV2
+\##📂 Struktur Folder Proyek
 
-Visualisasi performa training dan validation kedua model pretrained.
-
-
-
-!\[Plot VGG \& MobileNet](Assets/images/plot\_vgg\_mobilenet.png)
-
-
-
----
-
-
-
-\### 6️⃣ Prediksi 2 Model Pretrained
-
-Perbandingan hasil prediksi antara VGG16 dan MobileNetV2 pada citra yang sama.
-
-
-
-!\[Prediksi 2 Model](Assets/images/prediksi\_2\_model\_pretrained.png)
-
-
-
----
-
-
-
-\### 7️⃣ Struktur Folder VS Code
-
-Struktur folder proyek saat pengembangan di VS Code.
-
-
-
-!\[Struktur Folder VS Code](Assets/images/susunan\_folder\_vscode.png)
-
-
-
----
-
-
-
-\### 8️⃣ Tampilan Awal Aplikasi
-
-Tampilan halaman utama aplikasi Streamlit sebelum input gambar.
-
-
-
-!\[Tampilan Awal](Assets/images/tampilan\_awal.png)
-
-
-
----
-
-
-
-\### 9️⃣ Tampilan Prediksi 3 Model Sekaligus
-
-Fitur utama aplikasi yang menampilkan hasil prediksi \*\*Custom CNN, VGG16, dan MobileNetV2 secara bersamaan\*\*.
-
-
-
-!\[Prediksi 3 Model](Assets/images/tampilan\_prediksi\_3\_model.png)
-
-
-
----
-
-
-
-\## 📂 Struktur Folder Proyek
-
-```text
-
-UAP\_MachineLearning\_161/
-
-│
-
-├── app.py
-
-├── README.md
-
-│
-
-├── notebooks/
-
-│   └── UAP\_ML\_C\_2022\_161.ipynb
-
-│
-
-├── Assets/
-
-│   └── images/
-
-│
-
-└── models/
-
-&nbsp;   └── README.md
-
-
-
-\## 💾 Unduh Model, Instalasi, \& Informasi Pengembang
-
-
-
-\### 📥 Unduh Model (Weights)
-
-Karena keterbatasan ukuran file di GitHub, \*\*file model tidak disertakan langsung di dalam repository\*\*.  
-
-Seluruh model dapat diunduh melalui Google Drive berikut:
-
-
-
-\- \[Google Drive – Custom CNN Model](https://drive.google.com/drive/folders/1NOwoV9h9xUN17H8yYlRmD5Pfl\_3x5FNm)
-
-\- \[Google Drive – VGG16 \& MobileNetV2 Models](https://drive.google.com/drive/folders/1nC7vPMUW\_5nIsZq7z5cIaPIo-DF7ypRF)
-
-
-
-📌 \*\*Catatan\*\*:
-
-\- Pastikan file model ditempatkan sesuai path yang digunakan di `app.py`
-
-\- \*\*Google Colab\*\*: gunakan path `/content/drive/MyDrive/...`
-
-\- \*\*Lokal / VS Code\*\*: gunakan path relatif sesuai struktur proyek
-
-
-
----
-
-
-
-\### 🛠️ Tutorial Instalasi \& Penggunaan
-
-
-
-\#### 1. Clone Repository
-
-
-
-git clone https://github.com/Frizal14/UAP\_MachineLearning\_161.git
-
-cd UAP\_MachineLearning\_161
-
-
-
-\### 2. Instalasi Library
-
-Disarankan menggunakan \*\*TensorFlow versi 2.16.1\*\* agar kompatibel dengan model yang digunakan.
-
-pip install tensorflow==2.16.1 streamlit pillow numpy pandas plotly
-
-
-
-\### 3. Menjalankan Aplikasi
-
-
-
-Aplikasi akan terbuka otomatis melalui browser.
-
-
-
----
-
-
-
-\### 👨‍💻 Informasi Pengembang
-
-Nama : Ferdy Rizal Mahendra Putra
-
-
-
-NIM : 202210370311161
-
-
-
-Mata Kuliah : Machine Learning C
-
-
-
-Program Studi : Informatika
-
-
-
-Universitas : Universitas Muhammadiyah Malang
-
-
-
-📌 Repository ini dibuat untuk memenuhi Ujian Akhir Praktikum (UAP) Machine Learning.
-
-
+Struktur direktori repository ini disusun sebagai berikut:
 
