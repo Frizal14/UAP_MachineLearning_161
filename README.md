@@ -154,7 +154,9 @@ streamlit run app.py
 
 Aplikasi akan otomatis terbuka di browser Anda pada alamat http://localhost:8501.
 
-## 💡 Tips Pengguna Google Colab: File notebook pelatihan model (notebooks/UAP_ML_C_2022_161.ipynb) dapat langsung dijalankan di Google Colab jika Anda memiliki keterbatasan spesifikasi perangkat keras (GPU). Cukup unggah file tersebut ke Colab, namun pastikan Anda menyesuaikan kembali path (lokasi folder) dataset dan penyimpanan model di dalam kode agar sesuai dengan struktur direktori Google Drive Anda, karena konfigurasi path saat ini disesuaikan untuk lingkungan lokal (VS Code), dan sebaiknya pakai GPU T4 Google colab jika agar lebih lancar.
+## 💡 Tips Pengguna Google Colab :
+File notebook pelatihan model (notebooks/UAP_ML_C_2022_161.ipynb) dapat langsung dijalankan di Google Colab jika Anda memiliki keterbatasan spesifikasi perangkat keras (GPU). Cukup unggah file tersebut ke Colab, namun pastikan Anda menyesuaikan kembali path (lokasi folder) dataset dan penyimpanan model di dalam kode agar sesuai dengan struktur direktori Google Drive Anda, karena konfigurasi path saat ini disesuaikan untuk lingkungan lokal (VS Code), dan sebaiknya pakai GPU T4 Google colab jika agar lebih lancar.
+
 
 ## 👨‍💻 Identitas Pengembang
 Proyek ini dibuat sebagai syarat kelulusan praktikum.
