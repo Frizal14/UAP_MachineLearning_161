@@ -82,10 +82,17 @@ Berikut adalah bukti visualisasi hasil pelatihan (Confusion Matrix & Grafik Loss
 ## 💻 Tampilan Aplikasi
 Aplikasi dibangun menggunakan **Streamlit**. Berikut adalah antarmuka saat melakukan prediksi multi-model:
 Kamu akan diarahkan ke halaman ini untuk melakukan pengklasifikasian jenis ikan, dimana kamu dalam sekali input bisa memilih 3 model sekaligus dan pilih 1 per 1.
+
+**Tampilan Awal halaman Dashboard**
 ![Tampilan Awal Dashboard](Assets/Tampilan-awal.png)
 
+**Tampilan jika menginput gambar**
+Inputan gambar harus dari luar dataset jika ingin benar-benar menguji modelnya.
+![Tampilan Prediksi](Assets/InputanGambar.png)
 
+**Tampilan jika melakukan prediksi 3 model  sekaligus**
 ![Tampilan Prediksi](Assets/Tampilan-prediksi-3-model-sekaligus.png)
+
 
 ## 💻 Struktur Kode VSCODE
 Tampilan Struktur isi **VSCODE**. Berikut adalah antarmuka saat melakukan prediksi multi-model:
