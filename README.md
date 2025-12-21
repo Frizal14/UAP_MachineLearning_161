@@ -3,6 +3,7 @@
 # 🐟 Fish Classifier Pro
 ### Dashboard Analisis Klasifikasi Citra Ikan (UAP Machine Learning)
 
+![Visitors](https://api.visitorbadge.io/api/visitors?path=Frizal14%2FUAP_MachineLearning_161&label=Total%20Pengunjung&countColor=%2337d67a)
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.16.1-orange?style=for-the-badge&logo=tensorflow&logoColor=white)
