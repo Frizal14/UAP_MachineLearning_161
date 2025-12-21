@@ -3,7 +3,7 @@
 # 🐟 Fish Classifier Pro
 ### Dashboard Analisis Klasifikasi Citra Ikan (UAP Machine Learning)
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_svg.svg)]
+
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.16.1-orange?style=for-the-badge&logo=tensorflow&logoColor=white)
 
@@ -70,7 +70,7 @@ Berikut adalah bukti visualisasi hasil pelatihan (Confusion Matrix & Grafik Loss
 **1. Analisis Custom CNN**
 | Confusion Matrix | Grafik Training |
 | :---: | :---: |
-| ![Matrix CNN](Assets/cnn_confusion_matrix.png) | ![Plot CNN](Assets/cnn_plot.png) |
+| ![Matrix CNN](Assets/cnn-confusion-matrix.png) | ![Plot CNN](Assets/cnn_plot.png) |
 
 **2. Analisis Model Pretrained (VGG16 & MobileNetV2)**
 | Perbandingan Matrix | Perbandingan Grafik |
