@@ -135,7 +135,8 @@ Buka terminal / Command Prompt, lalu jalankan perintah berikut secara berurutan:
 
 # Clone repository dan masuk ke direktori proyek
 ```text
-git clone https://github.com/Frizal14/UAP_MachineLearning_161.git && cd UAP_MachineLearning_161
+git clone https://github.com/Frizal14/UAP_MachineLearning_161.git
+cd UAP_MachineLearning_161
 ```
 
 # Instal seluruh dependensi
