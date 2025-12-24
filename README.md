@@ -171,7 +171,7 @@ File notebook pelatihan model (notebooks/UAP_ML_C_2022_161.ipynb) dapat langsung
 
 # Hasil Deploy Streamlit
 ```Text
-[URL Streamlit](https://deployappgit-5qc5dopwk8vwcwasfkiwzr.streamlit.app/)
+https://deployappgit-5qc5dopwk8vwcwasfkiwzr.streamlit.app/
 ```
 
 ## 👨‍💻 Identitas Pengembang
